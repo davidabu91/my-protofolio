@@ -6,7 +6,7 @@ import { SocialIcon } from "react-social-icons";
 export default function NavBar() {
   return (
     <header className="bg-red-600">
-      <div className="container mx-auto flex justify-between">
+      <div className="container mx-auto lg:flex md:flex justify-between">
         <nav className="flex">
           <NavLink
             to="/"
@@ -37,13 +37,15 @@ export default function NavBar() {
           >
             About Me!
           </NavLink>
+         
         </nav>
-        <div className="inline-flex py-3 px-3 my-6">
+          <div className="inline-flex py-3 px-3 lg:my-6 md:my-6 " >
             <SocialIcon url="https://www.linkedin.com/in/david-abou-5b8972163/" className="mr-4" target="_blank" fgColor="#fff" style={{height:35, width:35}}/>
             <SocialIcon url="https://github.com/davidabu91" className="mr-4" target="_blank" fgColor="#fff" style={{height:35, width:35}}/>
             <SocialIcon url="https://www.facebook.com/profile.php?id=100000777557012" className="mr-4" target="_blank" fgColor="#fff" style={{height:35, width:35}}/>
         </div>
       </div>
+   
     </header>
   );
 }

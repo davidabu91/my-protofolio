@@ -6,7 +6,7 @@ export default function Home() {
     <main>
         <img src={image} alt="" className="absolute object-cover w-full h-full"/>
         <section className="relative flex justify-center min-h-screen pt-12 lg:pt-64 px-8">
-            <h1 className="text-4xl font-bold text-green-50 leading-none lg:leading-snug lg:home-name">Hello. I'm David.</h1>
+            <h1 className="lg:text-9xl text-7xl font-bold text-green-50 leading-none lg:leading-snug ">Hello. I'm David.</h1>
         </section>
     </main>
   );

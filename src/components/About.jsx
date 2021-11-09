@@ -28,9 +28,9 @@ export default function About() {
   if (!author) return <div>Loading...</div>;
 
   return (
-    <main className="relayive bg-green-600">
-      <img src={bgabout} alt="Family" className="absolute w-full  " />
-      <div className="p-10 lg:pt-48 container mx-auto relative">
+    <main className="relayive bg-yellow-400 bg-opacity-90">
+      {/* <img src={bgabout} alt="Family" className="absolute w-full filter brightness-125" /> */}
+      <div className="p-10  container mx-auto relative">
         <section className="">
           <img
             src={urlFor(author.authorImage).url()}
@@ -38,11 +38,11 @@ export default function About() {
             alt={author.name}
           />
           <div className="text-lg flex flex-col justify-center">
-            <h1 className="cursive lg:text-6xl text-4xl text-green-500 mb-4">
+            <h1 className="cursive lg:text-6xl text-4xl text-red-500 mb-4">
               Hey there. I'm{" "}
-              <span className="text-green-800">{author.name}</span>
+              <span className="text-red-600">{author.name}</span>
             </h1>
-            <div className="prose lg:prose-xl text-white ">
+            <div className="prose lg:prose-xl text-black font-mono">
               <BlockContetnt
                 blocks={author.bio}
                 projectId="0em3ra9r"

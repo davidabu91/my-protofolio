@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import bgabout from "../bgabout.jpg";
+// import bgabout from "../bgabout.jpg";
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContetnt from "@sanity/block-content-to-react";
 

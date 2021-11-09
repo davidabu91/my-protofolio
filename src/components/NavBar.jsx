@@ -14,7 +14,8 @@ export default function NavBar() {
             activeClassName="text-white"
             className="inflex-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-green-800 text-4xl font-bold cursive tracking-widest"
           >
-            David <br />Abou
+            David <br />Abou <br />
+            <span className="text-xs md:visible invisible">Fullstack Developer</span>
           </NavLink>
           <NavLink
             to="/post"

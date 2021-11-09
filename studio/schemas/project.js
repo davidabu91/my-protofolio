@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     name: "project",
     title: "Project",
@@ -17,6 +18,10 @@ export default {
         {
             name: "description",
             type: "text",
+        },
+        {
+            name: "githubLink",
+            type: "string"
         },
         {
             name: "projectType",

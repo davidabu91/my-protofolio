@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import sanityclient from "../client.js";
+import { SocialIcon } from "react-social-icons";
+// import { GoMarkGithub } from 'react-icons/go';
+
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
@@ -12,12 +15,13 @@ export default function Project() {
           date,
           place,
           description,
+          githubLink,
           projectType,
           link,
           tags
     }`
       )
-      .then((data) => setProjectData(data))
+      .then((data) =>{ setProjectData(data); console.log(data)})
       .catch(console.error);
   }, []);
 
@@ -31,7 +35,7 @@ export default function Project() {
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData &&
             projectData.map((project, index) => (
-              <article className="relative rounded-lg shadow-xl bg-white p-10 ">
+              <article className="relative rounded-lg shadow-xl bg-white p-5 ">
                 <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
                   <a
                     href={project.link}
@@ -67,6 +71,9 @@ export default function Project() {
                     View the Project{" "}
                     <span role="img" aria-label="right pointer"></span>
                   </a>
+                  {/* <a href='https://github.com/davidabu91'><GoMarkGithub/></a> */}
+                  <SocialIcon url={project.githubLink} className="ml-5 mb-2" target="_blank" fgColor="#fff" style={{height:30, width:30}}/>
+
                 </div>
               </article>
             ))}

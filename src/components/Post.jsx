@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Post() {
-  const [postData, setPost] = useState(null);
+  // const [postData, setPost] = useState(null);
 
   useEffect(() => {
     sanityClient

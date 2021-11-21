@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sanityclient from "../client.js";
 import { SocialIcon } from "react-social-icons";
-// import { GoMarkGithub } from 'react-icons/go';
+
 
 
 export default function Project() {
@@ -18,10 +18,15 @@ export default function Project() {
           githubLink,
           projectType,
           link,
-          tags
+          tags,
+          "projectImage": image.asset->url
+
     }`
       )
-      .then((data) =>{ setProjectData(data); console.log(data)})
+      .then((data) => {
+        setProjectData(data);
+        console.log(data);
+      })
       .catch(console.error);
   }, []);
 
@@ -35,7 +40,7 @@ export default function Project() {
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData &&
             projectData.map((project, index) => (
-              <article className="relative rounded-lg shadow-xl bg-white p-5 ">
+              <article key={index} className="relative rounded-lg shadow-xl bg-white p-5 ">
                 <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
                   <a
                     href={project.link}
@@ -46,19 +51,26 @@ export default function Project() {
                     {project.title}
                   </a>
                 </h3>
+                <img
+                    src={project.projectImage}
+                    className="rounded w-24 h-24 lg:w-32 lg:h-32 mr-8"
+                    alt={project.name}
+                  />
                 <div className="text-gray-500 text-xs   ">
-                  <span>
+                  {/* <span>
                     <strong className="font-bold">Finished on</strong>:{" "}
                     {new Date(project.date).toLocaleDateString()}
-                  </span><br />
+                  </span>
+                  <br />
                   <span>
                     <strong className="font-bold">Company</strong>:{" "}
                     {project.place}
-                  </span><br />
+                  </span>
+                  <br />
                   <span>
                     <strong className="font-bold">Type</strong>:{" "}
                     {project.projectType}
-                  </span>
+                  </span> */}
                   <p className="my-6 text-lg text-gray-700 leading-relaxed">
                     {project.description}
                   </p>
@@ -71,9 +83,14 @@ export default function Project() {
                     View the Project{" "}
                     <span role="img" aria-label="right pointer"></span>
                   </a>
-                  {/* <a href='https://github.com/davidabu91'><GoMarkGithub/></a> */}
-                  <SocialIcon url={project.githubLink} className="ml-5 mb-2" target="_blank" fgColor="#fff" style={{height:30, width:30}}/>
-
+                 
+                  <SocialIcon
+                    url={project.githubLink}
+                    className="ml-5 mb-2"
+                    target="_blank"
+                    fgColor="#fff"
+                    style={{ height: 30, width: 30 }}
+                  />
                 </div>
               </article>
             ))}

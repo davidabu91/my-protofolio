@@ -1,29 +1,29 @@
-import React, {  useEffect } from "react";
+import React from "react";
 
-import sanityClient from "../client.js";
+// import sanityClient from "../client.js";
 // import { Link } from "react-router-dom";
 
 export default function Post() {
   // const [postData, setPost] = useState(null);
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "post"]{
-            title,
-            slug,
-            mainImage{
-                asset->{
-                    _id,
-                    url
-                },
-                alt
-            }
-        }`
-      )
-      .then((data) => setPost(data))
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `*[_type == "post"]{
+  //           title,
+  //           slug,
+  //           mainImage{
+  //               asset->{
+  //                   _id,
+  //                   url
+  //               },
+  //               alt
+  //           }
+  //       }`
+  //     )
+  //     .then((data) => setPost(data))
+  //     .catch(console.error);
+  // }, []);
 
 
   return (

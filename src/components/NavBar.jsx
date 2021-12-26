@@ -31,7 +31,7 @@ export default function NavBar() {
             activeClassName="text-red-800 bg-green-100"
             className="inline-flex items-center py-3 px-3 my-8 rounded text-red-100 hover:text-green-400"
           >
-            Project
+            Projects
           </NavLink>
           <NavLink
             to="/about"

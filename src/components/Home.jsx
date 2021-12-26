@@ -22,12 +22,7 @@ export default function Home() {
         </h1>{" "}
         <br />
         <h6 className="lg:text-3xl   text-2xl text-green-50 font-bold  leading-none lg:leading-snug ">
-          {/* Graduated student searching for my first opportunity as a Front-End developer.{" "}
-          <br />
-          I have two years of code experience in website
-          design and MERN design concept. <br /> Knowledge and skills in front
-          and back-end web development. Experience in a variety of areas and the
-          ability to learn independently and quickly. */}
+         
           Graduated student searching for my first opportunity as a Front-End developer. <br />
           Operations Manager with 6+ years of experience in project management
           and process leadership. <br /> I am changing my career and looking for an

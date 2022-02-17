@@ -1,29 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-// import sanityClient from "../client.js";
-// import { Link } from "react-router-dom";
+import sanityClient from "../client.js";
+import { Link } from "react-router-dom";
 
 export default function Post() {
-  // const [postData, setPost] = useState(null);
+  const [postData, setPost] = useState(null);
 
-  // useEffect(() => {
-  //   sanityClient
-  //     .fetch(
-  //       `*[_type == "post"]{
-  //           title,
-  //           slug,
-  //           mainImage{
-  //               asset->{
-  //                   _id,
-  //                   url
-  //               },
-  //               alt
-  //           }
-  //       }`
-  //     )
-  //     .then((data) => setPost(data))
-  //     .catch(console.error);
-  // }, []);
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "post"]{
+            title,
+            slug,
+            mainImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            }
+        }`
+      )
+      .then((data) => setPost(data))
+      .catch(console.error);
+  }, []);
 
 
   return (
@@ -33,8 +33,8 @@ export default function Post() {
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome to my page of blog posts
         </h2>
-        <div className="flex justify-center">Soon...</div>
-        {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* <div className="flex justify-center">Soon...</div> */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {postData && postData.map((post,index) =>(
           <article >
             <Link to={"/post/" + post.slug.current} key={post.slug.current}>
@@ -54,7 +54,7 @@ export default function Post() {
             </Link>
           </article>
            )) }
-        </div> */}
+        </div>
       </section>
     </main>
   );

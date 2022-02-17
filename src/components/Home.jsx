@@ -23,13 +23,7 @@ export default function Home() {
         <br />
         <h6 className="lg:text-3xl   text-2xl text-green-50 font-bold  leading-none lg:leading-snug ">
          
-          Graduated student searching for my first opportunity as a Front-End developer. <br />
-          Operations Manager with 6+ years of experience in project management
-          and process leadership. <br /> I am changing my career and looking for an
-          opportunity as a <br /> <strong className="text-green-200 lg:text-4xl">FRONT END DEVELOPER.</strong> <br /> My motto: "Automate frequent
-          actions and take time to create new opportunities." <br /> Team player, open
-          mind and excellent communication skills. <br /> Organized, eager to learn new
-          things, loves to explore and solve problems.
+          Experienced operations manager with over six years of experience in project management and process improvement. <br /> I am changing my career and looking a position as a  <strong className="text-green-200 lg:text-4xl">FRONT END DEVELOPER.</strong> <br /> I live by my motto, "Automate frequent actions and take time to create new opportunities." <br /> Team player, open-minded, and excellent communicator. <br />A quick learner, who loves to explore and solve problems.
         </h6>
         <div className="bg-white opacity-30 mt-4 mb-4 p-4 rounded-xl">
           <div className="flex flex-row  justify-center ">

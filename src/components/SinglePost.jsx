@@ -31,7 +31,9 @@ export default function SinglePost() {
       "autherImage": auther->image,
     }`
       )
-      .then((data) => setSinglePost(data[0]))
+      .then((data) => {
+        setSinglePost(data[0]);
+      })
       .catch(console.error);
   }, [slug]);
 
@@ -43,34 +45,35 @@ export default function SinglePost() {
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
             <div className="bg-white bg-opacity-75 rounded p-12">
-              <h1 className="cursive text-3xl lg:text-6xl mb-4">
+              <h1 className="cursive text-3xl lg:text-6xl mb-4 text-center">
                 {singlePost.title}
               </h1>
-              <div className="flex justify-center text-gray-800">
-                <img
+              <div className="flex justify-center text-gray-800 ">
+                {/* <img
                   // src={singlePost.mainImage.asset.url}
                   src={singlePost.autherImage && urlFor(singlePost.autherImage).url()}
                   alt={singlePost.name}
                   className="w-10 h-10 ronded-full"
-                />
-                <p className="cursive flex items-center pl-2 text-2xl">
+                /> */}
+                {/* <p className="cursive flex items-center pl-2 text-2xl ">
                   {singlePost.name}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
           <img
             src={singlePost.mainImage.asset.url}
             alt={singlePost.title}
-            className="w-full object-cover rounded-t"
-            style={{ height: "400px" }}
+            className="w-full object-cover rounded-t h-48"
+            // style={{ height: "400px" }}
           />
         </header>
-        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:porse-xl max-w-full">
+        <div className="px-2 lg:px-48 py-12 lg:py-20 prose lg:porse-xl max-w-full text-r" style={{"direction": "rtl"}} >
           <BlockContetnt
             blocks={singlePost.body}
             projectId="0em3ra9r"
             dataset="production"
+            
           />
         </div>
       </article>

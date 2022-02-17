@@ -7,22 +7,22 @@ import Project from './components/Project.jsx';
 import NavBar from './components/NavBar.jsx'
 
 function App() {
-    return ( <BrowserRouter>
-    <NavBar/>
+    return (<BrowserRouter>
+        <NavBar />
         <Switch>
-        <Route component = { Home }
-        path = '/'
-        exact />
-        <Route component = { About }
-        path = '/about' />
-        <Route component = { SinglePost }
-        path = '/post/:slug' />
-        <Route component = { Post }
-        path = '/post' />
-        <Route component = { Project }
-        path = '/project' />
-        </Switch> 
-        </BrowserRouter>
+            <Route component={Home}
+                path='/'
+                exact />
+            <Route component={About}
+                path='/about' />
+            <Route component={SinglePost}
+                path='/post/:slug' />
+            <Route component={Post}
+                path='/post' />
+            <Route component={Project}
+                path='/project' />
+        </Switch>
+    </BrowserRouter>
     )
 }
 

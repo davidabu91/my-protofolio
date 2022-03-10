@@ -19,13 +19,7 @@ export default function NavBar() {
             David <br /> Abou 
             <span className="text-xs block"> Web Developer</span>
           </NavLink>
-          {/* <NavLink
-            to="/post"
-            activeClassName="text-red-800 bg-green-100"
-            className="inline-flex items-center py-3 px-3 my-8 rounded text-red-100 hover:text-green-400"
-          >
-            Blog Posts
-          </NavLink> */}
+  
           <NavLink
             to="/project"
             activeClassName="text-red-800 bg-green-100"
@@ -39,6 +33,13 @@ export default function NavBar() {
             className="inline-flex items-center py-3 px-3 my-8 rounded text-red-100 hover:text-green-400"
           >
             About Me
+          </NavLink>
+          <NavLink
+            to="/post"
+            activeClassName="text-red-800 bg-green-100"
+            className="inline-flex items-center py-3 px-3 my-8 rounded text-red-100 hover:text-green-400"
+          >
+            My Blog 
           </NavLink>
          
         </nav>

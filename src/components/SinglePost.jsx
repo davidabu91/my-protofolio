@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 // import imageUrlBuilder from '@sanity/image-url';
 import BlockContetnt from "@sanity/block-content-to-react";
+import { NavLink } from "react-router-dom";
 
 // const builder = imageUrlBuilder(sanityClient);
 // function urlFor(source) {
@@ -75,7 +76,16 @@ export default function SinglePost() {
             dataset="production"
             
           />
+
+<NavLink
+            to="/post"
+            activeClassName="text-red-800 bg-green-100"
+            className="inline-flex items-center  rounded text-red-100 hover:text-green-800 "
+          >
+            לעוד פוסטים
+          </NavLink>
         </div>
+      
       </article>
     </main>
   );
